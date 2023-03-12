@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap");
 
 body {
-  margin: 0;
+  margin: 0 auto;
   background-color: #f5f5f5;
   max-width: 1920px;
 }
@@ -29,11 +29,17 @@ header {
         font-weight: 500;
         font-size: 18px;
         padding: 10px;
-        border-radius: 0px 10px 0px 10px;
+        border-radius: 5px;
+        border: 1px solid $white;
+
         &:hover {
-          box-shadow: 5px 5px 10px 1px $black;
+          box-shadow: 0 3px $black;
+          transition: 1s;
+          transform: translateY(4px);
+          background: #ffffff;
+          border: 1px solid $black;
           transform: translateX(-8px) translateY(-8px);
-          transition-duration: 1s;
+          box-shadow: 6px 6px #3e3e3e;
         }
       }
     }
@@ -41,7 +47,7 @@ header {
   .buttons {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     a {
@@ -95,40 +101,43 @@ header {
   }
   .input__section {
     display: flex;
+    flex-direction: column;
     gap: 7px;
     #good-luck {
-      position: absolute;
-      top: 400px;
-      right: 310px;
+      max-width: 300px;
       font-size: 50px;
       font-family: $Poppins;
       font-weight: 500;
       background-color: $black;
       padding: 20px;
       color: #f5f5f5;
-      animation-name: goodLuck;
-      animation-duration: 5s;
       border-radius: 15px 0px 15px 0px;
     }
-    #search {
-      width: 400px;
-      height: 40px;
-      border-radius: 10px 0px 0px 10px;
-      font-size: 20px;
-    }
-    #search-button {
-      width: 90px;
-      height: 40px;
-      background-color: $black;
-      border-radius: 0px 10px 10px 0px;
-      color: #ffffff;
-      font-family: $Poppins;
-      cursor: pointer;
-      animation-name: searchBtn;
-      animation-duration: 2s;
-      &:active {
-        background-color: #ffffff;
-        color: $black;
+    .container {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      #search {
+        width: 400px;
+        height: 40px;
+        border-radius: 10px 0px 0px 10px;
+        font-size: 20px;
+      }
+      #search-button {
+        width: 90px;
+        height: 40px;
+        background-color: $black;
+        border-radius: 0px 10px 10px 0px;
+        color: #ffffff;
+        font-family: $Poppins;
+        cursor: pointer;
+        animation-name: searchBtn;
+        animation-duration: 2s;
+        &:active {
+          background-color: #ffffff;
+          color: $black;
+        }
       }
     }
   }
@@ -375,6 +384,7 @@ header {
 }
 .faqs__section {
   padding-top: 50px;
+  padding-bottom: 30px;
   margin-top: 200px;
   background-color: black;
   display: flex;
@@ -497,10 +507,10 @@ header {
 }
 footer {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
   display: flex;
   justify-content: space-around;
-  background-color: $black;
+  background-color: black;
   .footer__join {
     display: flex;
     gap: 10px;
@@ -518,6 +528,7 @@ footer {
       font-family: $Poppins;
       background-color: $white;
       border-radius: 4px;
+      cursor: pointer;
     }
   }
   .other {
@@ -546,25 +557,6 @@ footer {
       display: flex;
       flex-direction: column;
       gap: 10px;
-    }
-  }
-  .social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    #instagram {
-      width: 30px;
-      height: 30px;
-    }
-    #twitter {
-      width: 30px;
-      height: 30px;
-    }
-    #facebook {
-      width: 30px;
-      height: 30px;
     }
   }
 }

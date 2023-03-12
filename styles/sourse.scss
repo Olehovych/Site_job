@@ -14,19 +14,6 @@ $Poppins: "Poppins", sans-serif;
   }
 }
 
-// input__section //
-@keyframes goodLuck {
-  0% {
-    transform: translateX(100%);
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes searchBtn {
   from {
     background-color: $white;

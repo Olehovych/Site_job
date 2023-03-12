@@ -7,17 +7,6 @@
     opacity: 1;
   }
 }
-@keyframes goodLuck {
-  0% {
-    transform: translateX(100%);
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes searchBtn {
   from {
     background-color: #f5f5f5;
@@ -37,7 +26,7 @@
   }
 }
 body {
-  margin: 0;
+  margin: 0 auto;
   background-color: #f5f5f5;
   max-width: 1920px;
 }
@@ -66,17 +55,22 @@ header nav li a {
   font-weight: 500;
   font-size: 18px;
   padding: 10px;
-  border-radius: 0px 10px 0px 10px;
+  border-radius: 5px;
+  border: 1px solid #f5f5f5;
 }
 header nav li a:hover {
-  box-shadow: 5px 5px 10px 1px #202020;
+  box-shadow: 0 3px #202020;
+  transition: 1s;
+  transform: translateY(4px);
+  background: #ffffff;
+  border: 1px solid #202020;
   transform: translateX(-8px) translateY(-8px);
-  transition-duration: 1s;
+  box-shadow: 6px 6px #3e3e3e;
 }
 header .buttons {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
@@ -131,29 +125,32 @@ header .buttons button:active {
 }
 .main__section .input__section {
   display: flex;
+  flex-direction: column;
   gap: 7px;
 }
 .main__section .input__section #good-luck {
-  position: absolute;
-  top: 400px;
-  right: 310px;
+  max-width: 300px;
   font-size: 50px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   background-color: #202020;
   padding: 20px;
   color: #f5f5f5;
-  animation-name: goodLuck;
-  animation-duration: 5s;
   border-radius: 15px 0px 15px 0px;
 }
-.main__section .input__section #search {
+.main__section .input__section .container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main__section .input__section .container #search {
   width: 400px;
   height: 40px;
   border-radius: 10px 0px 0px 10px;
   font-size: 20px;
 }
-.main__section .input__section #search-button {
+.main__section .input__section .container #search-button {
   width: 90px;
   height: 40px;
   background-color: #202020;
@@ -164,7 +161,7 @@ header .buttons button:active {
   animation-name: searchBtn;
   animation-duration: 2s;
 }
-.main__section .input__section #search-button:active {
+.main__section .input__section .container #search-button:active {
   background-color: #ffffff;
   color: #202020;
 }
@@ -416,6 +413,7 @@ header .buttons button:active {
 
 .faqs__section {
   padding-top: 50px;
+  padding-bottom: 30px;
   margin-top: 200px;
   background-color: black;
   display: flex;
@@ -539,10 +537,10 @@ header .buttons button:active {
 
 footer {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
   display: flex;
   justify-content: space-around;
-  background-color: #202020;
+  background-color: black;
 }
 footer .footer__join {
   display: flex;
@@ -562,6 +560,7 @@ footer .footer__join button {
   font-family: "Poppins", sans-serif;
   background-color: #f5f5f5;
   border-radius: 4px;
+  cursor: pointer;
 }
 footer .other {
   display: flex;
@@ -590,23 +589,4 @@ footer .other .company {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-footer .social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-}
-footer .social #instagram {
-  width: 30px;
-  height: 30px;
-}
-footer .social #twitter {
-  width: 30px;
-  height: 30px;
-}
-footer .social #facebook {
-  width: 30px;
-  height: 30px;
 }/*# sourceMappingURL=style.css.map */
