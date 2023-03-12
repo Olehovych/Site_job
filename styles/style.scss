@@ -1,0 +1,570 @@
+@import "sourse.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap");
+
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+  max-width: 1920px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 100%;
+  height: 90px;
+  gap: 35%;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    li {
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        color: $black;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 0px 10px 0px 10px;
+        &:hover {
+          box-shadow: 5px 5px 10px 1px $black;
+          transform: translateX(-8px) translateY(-8px);
+          transition-duration: 1s;
+        }
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    a {
+      text-decoration: none;
+      color: $black;
+    }
+    button {
+      width: 150px;
+      height: 50px;
+      background: #ffffff;
+      border: 1px solid $black;
+      transform: translateX(-8px) translateY(-8px);
+      box-shadow: 6px 6px #3e3e3e;
+      border-radius: 5px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      animation-name: headerBtn;
+      animation-duration: 2s;
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+      &:active {
+        box-shadow: 0 3px $black;
+        transform: translateY(4px);
+      }
+    }
+  }
+}
+.main__section {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-top: 100px;
+  &_text {
+    flex-direction: column;
+    animation-name: textMain;
+    animation-duration: 3.5s;
+    h1 {
+      font-size: 80px;
+      font-family: $Poppins;
+      font-weight: 800;
+      text-shadow: 25px 45px 17px $black;
+    }
+    span {
+      font-size: 20px;
+      font-family: $Poppins;
+      font-weight: 500;
+    }
+  }
+  .input__section {
+    display: flex;
+    gap: 7px;
+    #good-luck {
+      position: absolute;
+      top: 400px;
+      right: 310px;
+      font-size: 50px;
+      font-family: $Poppins;
+      font-weight: 500;
+      background-color: $black;
+      padding: 20px;
+      color: #f5f5f5;
+      animation-name: goodLuck;
+      animation-duration: 5s;
+      border-radius: 15px 0px 15px 0px;
+    }
+    #search {
+      width: 400px;
+      height: 40px;
+      border-radius: 10px 0px 0px 10px;
+      font-size: 20px;
+    }
+    #search-button {
+      width: 90px;
+      height: 40px;
+      background-color: $black;
+      border-radius: 0px 10px 10px 0px;
+      color: #ffffff;
+      font-family: $Poppins;
+      cursor: pointer;
+      animation-name: searchBtn;
+      animation-duration: 2s;
+      &:active {
+        background-color: #ffffff;
+        color: $black;
+      }
+    }
+  }
+}
+.hired__section {
+  margin-top: 200px;
+  background-color: #181818;
+  max-width: 100%;
+  height: 100%;
+  h2 {
+    display: flex;
+    justify-content: center;
+    color: $white;
+    padding: 70px 0px 50px 0px;
+    font-size: 50px;
+    font-family: $Poppins;
+    font-weight: 500;
+  }
+  .block__section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 100px;
+    .block__section_hired {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      .icon_hired {
+        max-width: 50px;
+        height: 50px;
+      }
+      .hired__name {
+        color: $white;
+        font-family: $Poppins;
+        font-weight: 800;
+        font-size: 20px;
+      }
+      .hired__text {
+        max-width: 300px;
+        font-family: $Poppins;
+        font-weight: 500;
+        color: $white;
+        font-size: 14px;
+      }
+    }
+  }
+}
+.jobs__sections {
+  margin: 0 auto;
+  width: 90%;
+  h3 {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px 50px 0px;
+    color: $black;
+    font-size: 30px;
+    font-family: $Poppins;
+    font-weight: 800;
+  }
+  p {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 18px;
+    font-family: $Poppins;
+    font-weight: 500;
+    text-decoration: underline 2px;
+    cursor: pointer;
+  }
+  &_cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    .jobs__card {
+      width: 280px;
+      height: 300px;
+      background-color: $white;
+      border: 2px solid $black;
+      border-radius: 10px;
+      box-shadow: 5px 10px 5px 1px $black;
+      .img__card {
+        position: relative;
+        top: 30px;
+        left: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 10%;
+        // background-image: url(../img/cards_img.png);
+        background-color: #181818;
+        background-size: cover;
+        object-fit: cover;
+      }
+
+      .container__card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        left: 35px;
+        top: 15%;
+        &_name {
+          font-size: 18px;
+          color: $black;
+          font-family: $Poppins;
+          font-weight: 800;
+        }
+        &_text {
+          max-width: 200px;
+          font-size: 14px;
+          font-family: $Poppins;
+          font-weight: 500;
+        }
+        &_btn {
+          margin-top: 30px;
+          width: 75%;
+          height: 40px;
+          border: 1px solid $black;
+          transform: translateX(-8px) translateY(-8px);
+          box-shadow: 6px 6px #3e3e3e;
+          border-radius: 5px;
+          color: $black;
+          font-family: $Poppins;
+          cursor: pointer;
+          &:active {
+            box-shadow: 0 3px $black;
+            transform: translateY(4px);
+          }
+        }
+      }
+    }
+  }
+  #hidden {
+    display: none;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.culture__sections {
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+  h4 {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-family: $Poppins;
+    font-weight: 800;
+  }
+  &_container {
+    margin-left: 150px;
+    max-width: 60%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    .choice {
+      max-width: max-content;
+      padding: 10px;
+      border: 1px solid $black;
+      border-radius: 7px;
+      text-decoration: none;
+      font-size: 18px;
+      font-family: $Poppins;
+      font-weight: 500;
+      color: $black;
+      background-color: $white;
+
+      &:hover {
+        transition-duration: 0.5s;
+        color: $white;
+        background-color: $black;
+      }
+    }
+  }
+}
+.started {
+  margin-top: 200px;
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: $Poppins;
+    font-weight: 800;
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_left {
+      display: flex;
+      flex-direction: column;
+      width: 45%;
+      .block {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+        width: 513px;
+        height: 128px;
+        border: 1px solid $white;
+        border-radius: 15px;
+        text-decoration: none;
+        color: $black;
+        transition: 0.5s;
+        &:hover {
+          background: #ffffff;
+          border: 1px solid #000000;
+          box-shadow: 6px 6px 0px #000000;
+          transition: 1s;
+        }
+        .number {
+          margin-left: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          border: 1px solid $black;
+          box-shadow: 3px 3px 0px #000000;
+          border-radius: 8px;
+          font-size: 20px;
+          font-family: $Poppins;
+        }
+        .text {
+          font-size: 20px;
+          font-family: $Poppins;
+          font-weight: 500;
+        }
+      }
+    }
+    &_right {
+      width: 570px;
+      height: 460px;
+      background-image: url(../img/started_img.png);
+      object-fit: cover;
+    }
+  }
+}
+.faqs__section {
+  padding-top: 50px;
+  margin-top: 200px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: $Poppins;
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: $white;
+    font-family: $Poppins;
+    font-weight: 800;
+    padding-bottom: 50px;
+  }
+  &_question {
+    width: 80%;
+    height: 100px;
+    margin-bottom: 15px;
+    background-color: $black;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px 0px 30px;
+    align-items: center;
+    border-radius: 10px;
+    .text {
+      color: $white;
+    }
+    #faqs__btn {
+      cursor: pointer;
+    }
+  }
+}
+.shop__section {
+  margin-top: 150px;
+  padding-bottom: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $Poppins;
+  font-size: 60px;
+  flex-direction: column;
+  p {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  &_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    .start {
+      font-size: 16px;
+      font-weight: 200;
+      letter-spacing: 1px;
+      padding: 13px 20px 13px;
+      font-family: $Poppins;
+      outline: 0;
+      border: 1px solid black;
+      cursor: pointer;
+      color: $white;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      &:after {
+        content: "";
+        background-color: $black;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        top: -5px;
+        left: -7px;
+        transition: 0.2s;
+      }
+
+      &:hover:after {
+        top: 0px;
+        left: 0px;
+      }
+    }
+    .join {
+      font-size: 16px;
+      font-weight: 200;
+      letter-spacing: 1px;
+      padding: 13px 20px 13px;
+      font-family: $Poppins;
+      outline: 0;
+      border: 1px solid black;
+      cursor: pointer;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      color: $white;
+      &:after {
+        content: "";
+        background-color: $black;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        top: -5px;
+        left: -7px;
+        transition: 0.2s;
+      }
+
+      &:hover:after {
+        top: 0px;
+        left: 0px;
+      }
+    }
+  }
+}
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+  background-color: $black;
+  .footer__join {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    input {
+      width: 250px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      height: 44px;
+      color: $white;
+    }
+    button {
+      width: 147px;
+      height: 44px;
+      font-family: $Poppins;
+      background-color: $white;
+      border-radius: 4px;
+    }
+  }
+  .other {
+    display: flex;
+    gap: 40px;
+    justify-content: space-around;
+    align-items: center;
+    color: $white;
+    font-family: $Poppins;
+    font-size: 14px;
+    a {
+      text-decoration: none;
+      color: $white;
+    }
+    .find__work {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .find__people {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .company {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    #instagram {
+      width: 30px;
+      height: 30px;
+    }
+    #twitter {
+      width: 30px;
+      height: 30px;
+    }
+    #facebook {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
