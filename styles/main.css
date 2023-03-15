@@ -27,19 +27,51 @@
 }
 @media only screen and (min-width: 375px) and (max-width: 896px) {
   header {
+    margin-top: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
     align-items: center;
-    gap: 10px;
-  }
-  header nav {
-    gap: 10px;
+    gap: 0px !important;
   }
   header nav li a {
-    font-size: 16px;
+    font-size: 14px;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #f5f5f5;
+  }
+  header .buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+  }
+  header .buttons a {
+    text-decoration: none;
+    color: #202020;
+  }
+  header .buttons button {
+    width: 50px;
+    height: 500px;
+    background: #ffffff;
+    border: 1px solid #202020;
+    transform: translateX(-8px) translateY(-8px);
+    box-shadow: 6px 6px #3e3e3e;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    animation-name: headerBtn;
+    animation-duration: 2s;
+  }
+  header .buttons button a {
+    text-decoration: none;
+    color: #202020;
+  }
+  header .buttons button:active {
+    box-shadow: 0 3px #202020;
+    transform: translateY(4px);
   }
   .main__section {
     display: flex;
@@ -47,6 +79,31 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+  }
+  .main__section_text h1 {
+    font-size: 45px !important;
+  }
+  .main__section_text span {
+    font-size: 14px !important;
+  }
+  .main__section .input__section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .main__section .input__section #good-luck {
+    display: none;
+  }
+  .main__section .input__section .container {
+    width: 350px;
+  }
+  .culture__sections {
+    justify-content: start !important;
+    align-items: start !important;
+  }
+  .culture__sections_container {
+    display: flex;
+    flex-direction: column;
   }
   .started {
     margin-top: 200px;
@@ -643,4 +700,4 @@ footer .other .company {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

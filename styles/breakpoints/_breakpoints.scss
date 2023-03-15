@@ -1,17 +1,51 @@
 @media only screen and (min-width: 375px) and (max-width: 896px) {
   header {
+    margin-top: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
     align-items: center;
-    gap: 10px;
+    gap: 0px !important;
     nav {
-      gap: 10px;
       li {
         a {
-          font-size: 16px;
+          font-size: 14px;
           padding: 5px;
           border-radius: 5px;
           border: 1px solid $white;
+        }
+      }
+    }
+    .buttons {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+      button {
+        width: 50px;
+        height: 500px;
+        background: #ffffff;
+        border: 1px solid $black;
+        transform: translateX(-8px) translateY(-8px);
+        box-shadow: 6px 6px #3e3e3e;
+        border-radius: 5px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        animation-name: headerBtn;
+        animation-duration: 2s;
+        a {
+          text-decoration: none;
+          color: $black;
+        }
+        &:active {
+          box-shadow: 0 3px $black;
+          transform: translateY(4px);
         }
       }
     }
@@ -22,6 +56,33 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+    &_text {
+      h1 {
+        font-size: 45px !important;
+      }
+      span {
+        font-size: 14px !important;
+      }
+    }
+    .input__section {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      #good-luck {
+        display: none;
+      }
+      .container {
+        width: 350px;
+      }
+    }
+  }
+  .culture__sections {
+    justify-content: start !important;
+    align-items: start !important;
+    &_container {
+      display: flex;
+      flex-direction: column;
+    }
   }
   .started {
     margin-top: 200px;
@@ -35,7 +96,6 @@
           gap: 10px;
           width: 310px;
           height: 100px;
-
           .text {
             font-size: 18px;
           }
