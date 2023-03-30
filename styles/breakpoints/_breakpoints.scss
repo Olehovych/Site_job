@@ -1,4 +1,8 @@
-@media only screen and (min-width: 375px) and (max-width: 896px) {
+@media only screen and (min-width: 350px) and (max-width: 896px) {
+  body {
+    margin: 0 auto !important;
+    max-width: 100% !important;
+  }
   header {
     margin-top: 50px;
     display: flex;
@@ -7,9 +11,10 @@
     gap: 0px !important;
     nav {
       li {
+        width: 100%;
         a {
-          font-size: 14px;
-          padding: 5px;
+          font-size: 11px;
+          padding: 0px;
           border-radius: 5px;
           border: 1px solid $white;
         }
@@ -27,7 +32,7 @@
         color: $black;
       }
       button {
-        width: 50px;
+        width: 100px !important;
         height: 500px;
         background: #ffffff;
         border: 1px solid $black;

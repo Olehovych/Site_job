@@ -1,9 +1,9 @@
 AOS.init();
+
 const VIEW = document.getElementById("view");
 
 VIEW.addEventListener("click", function () {
   const HIDDEN = document.getElementById("hidden");
-
   HIDDEN.style.display = "flex";
   HIDDEN.style.transition = "1s";
 });
@@ -16,7 +16,13 @@ QUESTION_BTNS.forEach(function (btn) {
     const FAQS_TEXT = FAQS_SECTION.querySelector(".text");
     FAQS_SECTION.style.height = "170px";
     FAQS_SECTION.style.transition = "1s";
-    FAQS_TEXT.innerHTML =
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.";
+    QUESTION_BTNS.style.transformRotate = "180deg";
   });
+});
+
+const FOOTER__BTN = document.getElementById("footer__btn");
+
+FOOTER__BTN.addEventListener("click", function () {
+  const FOOTER__INPUT = document.getElementById("footer__input").value;
+  alert(FOOTER__INPUT);
 });
